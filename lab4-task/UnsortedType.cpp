@@ -39,6 +39,7 @@ template <class ItemType>
 void UnsortedType<ItemType>::getNextItem(ItemType &item)
 {
     currentPos++;
+
     item = info[currentPos];
 
     if (currentPos == length - 1)
@@ -47,7 +48,7 @@ void UnsortedType<ItemType>::getNextItem(ItemType &item)
     }
 }
 
-//// delete() implementation-1
+// //// delete() implementation-1
 
 // template <class ItemType>
 // void UnsortedType<ItemType>::deleteItem(ItemType item)

@@ -7,6 +7,8 @@ using namespace std;
 int main()
 {
 
+      int temp;
+
     UnsortedType<int> u1;
 
     u1.InsertItem(5);
@@ -26,18 +28,18 @@ int main()
     //     cout<< temp <<endl;
     // }
     
-    // cout << "//LENGTH:" << u1.LengthIs() << endl;
+    cout << "//LENGTH:" << u1.LengthIs() << endl;
 
     u1.deleteItem(2);
 
     cout<<"L:"<<u1.LengthIs()<<endl;
 
-    u1.InsertItem(65);
+     u1.InsertItem(65);
 
-     cout<<"L:"<<u1.LengthIs()<<endl;
+    cout<<"L:"<<u1.LengthIs()<<endl;
 
 
-      int temp;
+    
 
      for (int i = 0; i < u1.LengthIs(); i++)
     {

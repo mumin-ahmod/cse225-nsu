@@ -3,7 +3,7 @@
 
 #pragma once
 
-const int MAX_ITEMS = 5;
+const int MAX_ITEMS = 20;
 
 template <class ItemType>
 class UnsortedType
