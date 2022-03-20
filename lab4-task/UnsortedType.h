@@ -13,16 +13,18 @@ public:
     ~UnsortedType();
 
     void MakeEmpty();
-
     bool IsFull();
     int LengthIs();
-    void InsertItem(ItemType);
 
-    void getNextItem(ItemType&);
+    void InsertItem(ItemType);
 
     void deleteItem(ItemType v);
 
+    void RetriveItem(ItemType &, bool &);
 
+    void ResetList();
+
+    void getNextItem(ItemType &);
 
 private:
     int length;

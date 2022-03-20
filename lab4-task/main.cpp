@@ -19,24 +19,17 @@ int main()
 
    
 
-   
 
-    // for (int i = 0; i < u1.LengthIs(); i++)
-    // {
-    //      u1.getNextItem(temp);
-        
-    //     cout<< temp <<endl;
-    // }
     
     cout << "//LENGTH:" << u1.LengthIs() << endl;
 
-    u1.deleteItem(2);
+    // u1.deleteItem(2);
 
-    cout<<"L:"<<u1.LengthIs()<<endl;
+    // cout<<"L:"<<u1.LengthIs()<<endl;
 
-     u1.InsertItem(65);
+    //  u1.InsertItem(65);
 
-    cout<<"L:"<<u1.LengthIs()<<endl;
+    // cout<<"L:"<<u1.LengthIs()<<endl;
 
 
     
@@ -48,6 +41,10 @@ int main()
         cout<< temp <<endl;
     }
     
+    // int f=55;
+    // bool found=false;
+    // u1.RetriveItem(f, found);
+    // cout<<f<< ": "<< found<<endl;
 
     return 0;
 }

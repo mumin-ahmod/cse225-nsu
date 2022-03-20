@@ -35,6 +35,7 @@ int UnsortedType<ItemType>::LengthIs()
     return length;
 }
 
+
 template <class ItemType>
 void UnsortedType<ItemType>::getNextItem(ItemType &item)
 {
@@ -47,6 +48,18 @@ void UnsortedType<ItemType>::getNextItem(ItemType &item)
         currentPos = -1;
     }
 }
+
+// // getNextItem() implementation-1
+
+// template <class ItemType>
+// void UnsortedType<ItemType>::getNextItem(ItemType &item)
+// {
+//     currentPos++;
+
+//     item = info[currentPos];
+
+// }
+
 
 // //// delete() implementation-1
 
@@ -92,6 +105,37 @@ void UnsortedType<ItemType>::deleteItem(ItemType item)
     }
 
     
+}
+
+
+template <class ItemType>
+void UnsortedType<ItemType>::RetriveItem(ItemType &item, bool& found)
+{
+    int location =0;
+
+    bool moreToSearch = (location<length);
+
+    found = false;
+
+    while(moreToSearch && !found){
+        if(item==info[location]){
+            found = true;
+            item=info[location];
+        }
+        else{
+            location++;
+            moreToSearch = (location<length);
+        }
+    }
+}
+
+
+
+
+template <class ItemType>
+void UnsortedType<ItemType>::ResetList()
+{
+    currentPos=-1;
 }
 
 template <class ItemType>
