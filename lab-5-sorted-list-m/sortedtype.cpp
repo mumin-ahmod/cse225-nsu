@@ -11,6 +11,28 @@ sortedtype<ItemType>::sortedtype()
     currentPos = -1;
 }
 
+
+template <class ItemType>
+void sortedtype<ItemType>::MakeEmpty()
+{
+    length = 0;
+}
+
+template <class ItemType>
+bool sortedtype<ItemType>::isFull()
+{
+    return (length == MAX_ITEMS);
+}
+
+
+template <class ItemType>
+int sortedtype<ItemType>::LengthIs()
+{
+    return length;
+}
+
+
+
 template <class ItemType>
 void sortedtype<ItemType>::InsertItem(ItemType v)
 {
@@ -53,29 +75,7 @@ void sortedtype<ItemType>::InsertItem(ItemType v)
     }
 }
 
-template <class ItemType>
-ItemType sortedtype<ItemType>::GetNextItem()
-{
 
-    int item = currentPos + 1;
-
-    if (currentPos == length - 1)
-    {
-        currentPos = -1;
-    }
-    else
-    {
-        currentPos = item;
-    }
-
-    return info[item];
-}
-
-template <class ItemType>
-int sortedtype<ItemType>::LengthIs()
-{
-    return length;
-}
 
 template <class ItemType>
 void sortedtype<ItemType>::DeleteItem(ItemType item)
@@ -98,7 +98,7 @@ void sortedtype<ItemType>::DeleteItem(ItemType item)
 }
 
 template <class ItemType>
-bool sortedtype<ItemType>::RetriveItem(ItemType &v)
+void sortedtype<ItemType>::RetriveItem(ItemType &v, bool& found)
 {
 
     int first = 0, last = length - 1;
@@ -128,13 +128,38 @@ bool sortedtype<ItemType>::RetriveItem(ItemType &v)
 
              moreToSearch = false;
 
-            return true;
+            found=true;
 
            
         }
     }
 
-    return false;
+  
+}
+
+
+template <class ItemType>
+void sortedtype<ItemType>::ResetList()
+{
+    currentPos=-1;
+}
+
+
+template <class ItemType>
+void sortedtype<ItemType>::GetNextItem(ItemType& item)
+{
+
+    currentPos++;
+
+    item = info[currentPos];
+
+
+    if (currentPos == length - 1)
+    {
+        currentPos = -1;
+    }
+    
+    
 }
 
 template class sortedtype<int>;

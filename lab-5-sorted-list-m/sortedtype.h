@@ -13,21 +13,16 @@ public:
     sortedtype();
 
     void MakeEmpty();
-
-    
-
+    bool isFull();
     int LengthIs();
 
     void InsertItem(ItemType);
-
-    bool isFull();
     void DeleteItem(ItemType);
-    bool RetriveItem(ItemType&);
+
+    void RetriveItem(ItemType&, bool&);
 
     void ResetList();
-
-
-    ItemType GetNextItem();
+    void GetNextItem(ItemType&);
 
 
   

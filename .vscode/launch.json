@@ -9,9 +9,9 @@
         ""
       ],
       "stopAtEntry": false,
-      "cwd": "g:/Codes/225-store-git/cse225-nsu/lab4-task",
+      "cwd": "g:/Codes/225-store-git/cse225-nsu/lab-5-sorted-list-m",
       "environment": [],
-      "program": "g:/Codes/225-store-git/cse225-nsu/lab4-task/build/Debug/outDebug",
+      "program": "g:/Codes/225-store-git/cse225-nsu/lab-5-sorted-list-m/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
