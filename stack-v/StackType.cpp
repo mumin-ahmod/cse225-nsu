@@ -51,6 +51,17 @@ void StackType<ItemType>::push(ItemType v)
     
 }
 
+template <class ItemType>
+void StackType<ItemType>::Pop()
+{
+    if( IsEmpty()){
+        cout<<"stack empty"<<endl;
+    }else{
+        top--;
+    }
+
+}
+
 
 template <class ItemType>
 ItemType StackType<ItemType>::Top()

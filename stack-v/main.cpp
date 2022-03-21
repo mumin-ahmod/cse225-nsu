@@ -18,7 +18,7 @@ o1.push(25);
 o1.push(30);
 o1.push(2);
 
-
+o1.Pop();
 
 // cout<< o1.Top() << endl;
 
