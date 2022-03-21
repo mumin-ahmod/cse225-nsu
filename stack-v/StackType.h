@@ -31,6 +31,8 @@ public:
 
     ItemType Top();
 
+    void Print();
+
 
     ~StackType();
 

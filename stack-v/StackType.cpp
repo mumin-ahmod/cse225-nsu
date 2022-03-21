@@ -64,6 +64,29 @@ return items[top];
 
 
 template <class ItemType>
+void StackType<ItemType>::Print()
+{
+
+    if(IsEmpty()){
+        cout<< "stack is empty"<< endl;
+    }
+    else{
+        
+    for (int i = 0; i <=top; i++)
+    {
+        cout<< items[i] << endl;
+    }
+
+    }
+    
+    
+
+}
+
+
+
+
+template <class ItemType>
 StackType<ItemType>::~StackType()
 {
 
