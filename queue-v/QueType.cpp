@@ -64,7 +64,7 @@ void QueType<ItemType>::Enqueue(ItemType v)
 
     if (IsFull())
     {
-        std::cout << "queue is full" << std::endl;
+        std::cout << "queue overflow" << std::endl;
     }
     else
     {
@@ -77,12 +77,14 @@ void QueType<ItemType>::Enqueue(ItemType v)
 }
 
 template <class ItemType>
-void QueType<ItemType>::Dequeue(ItemType &item)
+void QueType<ItemType>::Dequeue()
 {
 
     if (IsEmpty())
     {
-        throw EmptyQueue();
+        //throw EmptyQueue();
+
+        cout<< "Queue underflow"<<endl;
     }
     else
     {
@@ -90,7 +92,7 @@ void QueType<ItemType>::Dequeue(ItemType &item)
 
         front = (front + 1) % maxQue;
 
-        item = items[front+1];
+        
     }
 }
 
@@ -112,6 +114,8 @@ void QueType<ItemType>::Print()
         }
     }
 }
+
+
 
 
 template class QueType<int>;

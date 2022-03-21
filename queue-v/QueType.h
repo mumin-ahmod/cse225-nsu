@@ -26,7 +26,9 @@ public:
     bool IsFull();
 
     void Enqueue(ItemType);
-    void Dequeue(ItemType&);
+    void Dequeue();
+
+    ItemType Front();
 
     void Print();
 
