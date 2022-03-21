@@ -20,8 +20,10 @@ o1.push(2);
 
 
 
-   cout<< o1.Top() << endl;
+// cout<< o1.Top() << endl;
 
+
+o1.Print();
 
 
 
