@@ -90,7 +90,7 @@ void QueType<ItemType>::Dequeue(ItemType &item)
 
         front = (front + 1) % maxQue;
 
-        item = items[front];
+        item = items[front+1];
     }
 }
 

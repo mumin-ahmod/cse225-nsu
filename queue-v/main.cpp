@@ -21,7 +21,9 @@ int main(){
 
     o1.Print();
 
+    
 
+    cout<<"1st: "<<n<<endl;
 
 return 0;
 
