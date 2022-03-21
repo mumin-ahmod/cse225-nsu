@@ -117,5 +117,15 @@ void QueType<ItemType>::Print()
 
 
 
+template <class ItemType>
+ItemType QueType<ItemType>::Front()
+{
+
+    int i = (front+1) % maxQue;
+
+    return items[i];
+}
+
+
 
 template class QueType<int>;

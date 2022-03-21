@@ -16,14 +16,18 @@ int main(){
 
 
     
-    int n;
-    o1.Dequeue(n);
+    
+    o1.Dequeue();
+    o1.Dequeue();
+    o1.Dequeue();
+    o1.Dequeue();
+
 
     o1.Print();
 
-    
+    cout<<"front:"<< o1.Front() <<endl;
 
-    cout<<"1st: "<<n<<endl;
+   
 
 return 0;
 
