@@ -83,7 +83,7 @@ void StackType<ItemType>::Print()
     }
     else{
         
-    for (int i = 0; i <=top; i++)
+    for (int i = top; i>=0; i--)
     {
         cout<< items[i] << endl;
     }
