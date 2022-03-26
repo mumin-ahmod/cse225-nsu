@@ -22,6 +22,8 @@ public:
     void deleteFirstNode();
     void deleteLastNode();
 
+    void deleteNode(ItemType);
+
     void printNodes();
 
     void makeEmpty();

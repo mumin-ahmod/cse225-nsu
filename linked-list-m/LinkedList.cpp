@@ -93,6 +93,49 @@ void LinkedList<ItemType>::deleteLastNode()
 }
 
 template <class ItemType>
+void LinkedList<ItemType>::deleteNode(ItemType value)
+{ //delete anywhere / search and delete
+
+    NodeType *nn;
+    int c = 0;
+
+    if (head == NULL)
+    {
+        cout << "List is empty." << endl;
+    }
+    else if (head->data == value)
+    {
+        deleteFirstNode();
+    }
+    else
+    {
+        NodeType *current = head;
+
+        while (current->next != NULL)
+        {
+            if (current->next->data == value)
+            {
+                c++;
+                break;
+            }
+
+            current = current->next;
+        }
+
+        if (c == 0)
+        {
+            cout << "Not Found" << endl;
+        }
+
+        nn = current->next->next;
+
+        delete current->next;
+
+        current->next = nn;
+    }
+}
+
+template <class ItemType>
 void LinkedList<ItemType>::printNodes()
 {
     NodeType *current = head;
