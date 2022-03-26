@@ -10,14 +10,10 @@ class LinkedList
     struct NodeType
     {
         ItemType data;
-        NodeType* next;
+        NodeType *next;
     };
-    
+
 public:
-
-
-
-
     LinkedList();
 
     void addNodeAtFront(ItemType);
@@ -31,14 +27,10 @@ public:
     void makeEmpty();
     void getLength();
 
-    void findLarge();
-
     ~LinkedList();
 
 private:
-
     NodeType *head;
-
 };
 
 #endif

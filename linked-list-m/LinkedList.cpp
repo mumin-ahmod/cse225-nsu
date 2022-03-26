@@ -49,6 +49,50 @@ void LinkedList<ItemType>::addNodeAtLast(ItemType data)
 }
 
 template <class ItemType>
+void LinkedList<ItemType>::deleteFirstNode()
+{
+
+    if (head == NULL)
+    {
+        cout << "List is empty." << endl;
+    }
+    else
+    {
+
+        head = head->next;
+    }
+}
+
+template <class ItemType>
+void LinkedList<ItemType>::deleteLastNode()
+{
+
+    if (head == NULL)
+    {
+        cout << "List is empty." << endl;
+    }
+    else if (head->next == NULL)
+    {
+        deleteFirstNode();
+    }
+
+    else
+    {
+        NodeType *current = head;
+
+        while (current->next->next != NULL)
+        {
+
+            current = current->next;
+        }
+
+        delete current->next;
+
+        current->next = NULL;
+    }
+}
+
+template <class ItemType>
 void LinkedList<ItemType>::printNodes()
 {
     NodeType *current = head;
@@ -75,50 +119,6 @@ void LinkedList<ItemType>::printNodes()
         }
     }
 }
-
-// template <class ItemType>
-// void LinkedList<ItemType>::findLarge()
-// {
-
-//     NodeType *current = head;
-
-//     int sum = 0,  n, n2;
-
-//     int big = current->data;
-
-//     if(head == NULL)
-//     {
-//         cout << "List is empty." << endl;
-//     } else
-//     {
-       
-
-//         while (current != NULL)
-//         {
-           
-
-//             n = current->data;
-//             n2 = current->next->data;
-
-//             if (n2>n)
-//             {
-//                 big = n2;
-//             }
-            
-//             sum = sum + n;
-
-//             current = current->next;
-
-
-//             if(current->next == NULL){
-//                 break;
-//             }
-//         }
-
-//         cout << "sum: " << sum << endl;
-//         cout << "biggest: " << big << endl;
-//     }
-// }
 
 template <class ItemType>
 LinkedList<ItemType>::~LinkedList()

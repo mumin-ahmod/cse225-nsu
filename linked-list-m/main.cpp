@@ -16,11 +16,16 @@ int main()
 
     l1.addNodeAtLast(2);
 
+    l1.deleteFirstNode();
+    l1.deleteLastNode();
 
 
-    //l1.printNodes();
 
-    l1.findLarge();
+
+
+    l1.printNodes();
+
+    
 
     return 0;
 }
