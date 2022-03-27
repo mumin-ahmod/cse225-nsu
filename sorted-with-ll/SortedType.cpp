@@ -20,6 +20,12 @@ void SortedType<ItemType>::InsertItem(ItemType value)
 }
 
 
+template <class ItemType>
+void SortedType<ItemType>::DeleteItem(ItemType value)
+{
+    l.deleteNode(value);
+}
+
 
 template <class ItemType>
 void SortedType<ItemType>::printList()
