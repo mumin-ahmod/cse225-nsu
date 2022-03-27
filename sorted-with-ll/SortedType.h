@@ -1,33 +1,29 @@
-#ifndef UNSORTEDTYPE_H
-#define UNSORTEDTYPE_H
+#ifndef SORTEDTYPE_H
+#define SORTEDTYPE_H
 
 #include "LinkedList.h"
 
 #pragma once
 
 template <class ItemType>
-class UnsortedType
+class SortedType
 {
-
 public:
-    UnsortedType();
-    ~UnsortedType();
+    SortedType();
 
     void MakeEmpty();
-    bool IsFull();
+    bool isFull();
     int LengthIs();
 
     void InsertItem(ItemType);
-
-    void deleteItem(ItemType v);
+    void DeleteItem(ItemType);
 
     void RetriveItem(ItemType &, bool &);
 
-    void ResetList();
-
     void printList();
 
-    void getNextItem(ItemType &);
+    void ResetList();
+    void GetNextItem(ItemType &);
 
 private:
 
@@ -35,8 +31,10 @@ private:
 
     int length;
     
-    // NodeType *listdata;
     int currentPos;
+
 };
 
 #endif
+
+template class SortedType<int>;
