@@ -26,6 +26,8 @@ public:
 
     void printNodes();
 
+    ItemType printHead();
+
     void makeEmpty();
     void getLength();
 
@@ -203,6 +205,14 @@ void LinkedList<ItemType>::printNodes()
             current = current->next;
         }
     }
+}
+
+template <class ItemType>
+ItemType LinkedList<ItemType>::printHead()
+{
+
+    return head->data;
+  
 }
 
 template <class ItemType>
