@@ -16,6 +16,7 @@ public:
 
     bool IsFull();
     int LengthIs();
+
     void InsertItem(ItemType);
 
     ItemType getNextItem();

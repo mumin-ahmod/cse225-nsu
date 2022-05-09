@@ -16,6 +16,8 @@ int main()
     s1.push(17);
     s1.push(25);
 
+    s1.Pop();
+
     cout << s1.Top() <<endl;
 
     s1.Print();
